@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Local IPs:"
+ifconfig | grep 'inet ' | awk '{print "\t" $2}'
+echo "Public IP:"
+echo -en "\t"; curl ipinfo.io/ip
